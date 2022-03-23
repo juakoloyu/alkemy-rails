@@ -1,4 +1,4 @@
 class CharacterSerializer < ActiveModel::Serializer
     attributes :image,:name
-    has_many :films
+    has_many :movies
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_23_192615) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_23_193150) do
   create_table "characters", force: :cascade do |t|
     t.string "image"
     t.string "name"
@@ -21,21 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_23_192615) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "characters_films", force: :cascade do |t|
+  create_table "characters_movies", force: :cascade do |t|
     t.integer "character_id"
-    t.integer "film_id"
+    t.integer "movie_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["character_id"], name: "index_characters_films_on_character_id"
-    t.index ["film_id"], name: "index_characters_films_on_film_id"
-  end
-
-  create_table "films", force: :cascade do |t|
-    t.string "image"
-    t.string "title"
-    t.integer "score"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_characters_movies_on_character_id"
+    t.index ["movie_id"], name: "index_characters_movies_on_movie_id"
   end
 
   create_table "genres", force: :cascade do |t|
@@ -45,7 +37,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_23_192615) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "moovies", force: :cascade do |t|
+  create_table "movies", force: :cascade do |t|
     t.string "image"
     t.string "title"
     t.string "score"
