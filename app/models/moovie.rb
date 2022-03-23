@@ -1,0 +1,2 @@
+class Moovie < ApplicationRecord
+end

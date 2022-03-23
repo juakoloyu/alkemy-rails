@@ -3,9 +3,9 @@
 one:
   image: MyString
   title: MyString
-  score: 1
+  score: MyString
 
 two:
   image: MyString
   title: MyString
-  score: 1
+  score: MyString
